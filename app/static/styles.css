@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #ffe5b4; /* Soft papaya background */
+    color: #5a3e2b; /* Warm brown text color */
+}
+
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffcc99; /* Lighter papaya tone */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #d88a58; /* Deeper papaya tone */
+    padding: 12px;
+}
+
+th {
+    background-color: #ffb366; /* Medium papaya shade */
+    color: #5a3e2b;
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffdab9; /* Soft pastel papaya */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff914d; /* Vibrant papaya accent */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6734b; /* Slightly darker papaya shade */
+}

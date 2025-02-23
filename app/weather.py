@@ -1,6 +1,7 @@
 import requests
 from config import Config
 
+
 class WeatherService:
     def __init__(self, URL, KEY):
         self.api_url = URL
@@ -21,6 +22,7 @@ class WeatherService:
         response = requests.get(url, params=self.params, headers=self.headers)
         response.raise_for_status()
         data = response.json()["data"]["values"]
+        data["weather_date"] = response.json()["data"]["time"]
         return data
 
     def fetch_last_24hrs_weather_data(self) -> dict:
@@ -30,8 +32,8 @@ class WeatherService:
         params["timesteps"] = ["1d"]
         response = requests.get(url, params=params, headers=self.headers)
         response.raise_for_status()
-        data = response.json()["timelines"]["daily"][0]['values']
-        data['weather_date'] = response.json()["timelines"]["daily"][0]['time']
+        data = response.json()["timelines"]["daily"][0]["values"]
+        data["weather_date"] = response.json()["timelines"]["daily"][0]["time"]
         return data
 
     def fetch_forecast_weather_data(self) -> list[dict]:
